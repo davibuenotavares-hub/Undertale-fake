@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* Evita comportamentos estranhos de toque no mobile */
+    touch-action: none; 
+}
+
+#game-container {
+    width: 100vw;
+    height: 50vh;
+    border-bottom: 2px solid #fff;
+    background: #000;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+#ui-container {
+    width: 100%;
+    height: 50vh;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stats {
+    font-size: 1.5rem;
+    color: #ffff00; /* Cor amarela clássica */
+}
+
+.dialog-box {
+    border: 4px solid #fff;
+    min-height: 80px;
+    padding: 10px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    background: #000;
+    color: #ff9d00;
+    border: 3px solid #ff9d00;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    touch-action: manipulation;
+}
+
+button:active {
+    background: #ff9d00;
+    color: #000;
+}
+
+/* Estilização do D-Pad */
+#dpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 180px;
+    margin: 0 auto;
+    gap: 5px;
+}
+
+.d-btn {
+    background: #222;
+    border: 2px solid #fff;
+    color: white;
+    height: 60px;
+    font-size: 1.5rem;
+}
